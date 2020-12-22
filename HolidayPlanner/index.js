@@ -8,42 +8,36 @@ const activities = [
   {
     id: 2,
     description: "cooking nice meals",
-
     duration: 120,
     price: 100,
   },
   {
     id: 3,
     description: "Swimming in the ocean",
-
     duration: 120,
     price: 120,
   },
   {
     id: 4,
     description: "Picking up precious stones",
-
     duration: 180,
     price: 180,
   },
   {
     id: 5,
     description: "swimming with dolphins",
-
     duration: 240,
     price: 250,
   },
   {
     id: 6,
     description: "24hour pass go kart",
-
     duration: 240,
     price: 300,
   },
   {
     id: 7,
     description: "Driving a Ferrari",
-
     duration: 180,
     price: 200,
   },
