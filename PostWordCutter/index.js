@@ -2,7 +2,7 @@
 const post_integral =
   "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
 
-const char_preview = 7;
+const char_preview = 20;
 
 const preview_maker = (post, preview_characters) => {
   // Cutting the string and get raw preview
@@ -14,10 +14,16 @@ const preview_maker = (post, preview_characters) => {
   // If last char ends with a white space
   if (last_char.endsWith(" ")) {
     console.log("Formatted Preview: " + raw_preview.trim() + "...");
-  }
-  // If it does not
-  else {
+  } else {
     // Go back until find a white space
+    for (let i = raw_preview.length - 1; i >= 0; i--) {
+      console.log(raw_preview[i]);
+
+      if (raw_preview[i] === " ") {
+        console.log(raw_preview.slice(0, i).trim() + "...");
+        return;
+      }
+    }
   }
 };
 
