@@ -1,14 +1,14 @@
 # Holiday Planner
 
-A travel agency wants to organize a trip holiday to a group of people.
+A travel agency wants to organize a trip holiday for a group of people.
 
 This group of people has established days of holidays called `days` and a certain budget called `budget`.
 
 In that specific destination, there is a list of activities that can be done, one activity is composed of `id`, `description`, `duration`, and `price`.
 
-Considering that every day this group of people can only spend `4 hours` on activities (can be only 1 or can be many).
-
 ## The mission
+
+> Considering that every day this group of people can only spend `4 hours` on activities (can be only 1 activity or can be many activities).
 
 > _List all the possible activities that can be done in `n` days considering the daily time at disposition and the total budget._
 
