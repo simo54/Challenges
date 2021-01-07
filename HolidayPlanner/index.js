@@ -44,13 +44,18 @@ const activities = [
 ];
 
 const bestPlan = (days, budget, timeForActivities) => {
-  // Offer to client
-  let offer = [];
+  // This offer variable will display the offer to the client
+  let offerToClient = [];
 
   // Define how many minutes are available for the entire holiday that can be used for activites
   const timeAvailable = days * (timeForActivities * 60);
 
-  console.log("Time for activities: " + timeAvailable + " minutes. With a budget of " + budget);
+  console.log(
+    "Time for activities: " +
+      timeAvailable +
+      " minutes. With a budget of " +
+      budget
+  );
 
   // Excluding activities with price over the budget
   const arrayFiltered = activities.filter((activity) => {
@@ -79,11 +84,13 @@ const bestPlan = (days, budget, timeForActivities) => {
     totalActDuration += activity.duration;
     if (totalPrice > budget || totalActDuration > timeAvailable) {
       console.log("Budget required: " + (totalPrice - activity.price));
-      console.log("Total activities time: " + (totalActDuration - activity.duration));
-      console.log("Final Results details: ", offer);
+      console.log(
+        "Total activities time: " + (totalActDuration - activity.duration)
+      );
+      console.log("Final Results details: ", offerToClient);
       return;
     }
-    offer.push(activity.description);
+    offerToClient.push(activity.description);
   }
 };
 
