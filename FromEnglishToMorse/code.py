@@ -50,7 +50,7 @@ lettersToMorse = {
 choice = int(input("\nWelcome! Please press 1 for English or 2 for Morse\nInput: "))
 
 if choice == 1:  
-    text_english = str(input("\nEnter Text to be translated\n\n"))  
+    text_english = str(input("\nEnter Text to be translated\n\n")).lower()
     
     output = ""
 
@@ -60,20 +60,17 @@ if choice == 1:
                 output += lettersToMorse.get(match[0]) + " "
                 break
     print("Output Morse: " + output)
-   
-
 else:
     text_morse = str(input("\nEnter Morse to be translated\n\n"))
 
     output = ""
 
-    for morse in text_morse:
+    for morse in text_morse.split():
         for match in lettersToMorse:
-            if morse == lettersToMorse.get(match[0]):
-                print("this is the morse: " + morse)
-                print("match is: " + match)
+                if morse == lettersToMorse.get(match[0]):
+                    output += match
 
-
-
+    print("Output: " + output)
+  
 
 

@@ -2,7 +2,7 @@
 
 ### Mission
 
-Write a program that automatically converts English text to Morse code and vice versa.
+Using Python, write a program that automatically converts English text to Morse code and vice versa.
 
 ### Credits
 
