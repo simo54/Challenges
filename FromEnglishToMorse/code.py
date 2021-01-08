@@ -47,7 +47,7 @@ lettersToMorse = {
   ")": "-.--.-"
 }
 
-choice = int(input("\nWelcome! Please press 1 for English or 2 for Morse\nInput: "))
+choice = int(input("\nWelcome! Please press 1 for English to Morse or 2 for Morse to English\nInput: "))
 
 if choice == 1:  
     text_english = str(input("\nEnter Text to be translated\n\n")).lower()
