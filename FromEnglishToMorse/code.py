@@ -1,3 +1,4 @@
+
 # creating dictionary
 lettersToMorse = {
   "0": "-----",
@@ -49,6 +50,7 @@ lettersToMorse = {
 
 choice = int(input("\nWelcome! Please press 1 for English to Morse or 2 for Morse to English\nInput: "))
 
+# From English to Morse
 if choice == 1:  
     text_english = str(input("\nEnter Text to be translated\n\n")).lower()
     
@@ -60,6 +62,8 @@ if choice == 1:
                 output += lettersToMorse.get(match[0]) + " "
                 break
     print("Output Morse: " + output)
+
+# From Morse to English
 else:
     text_morse = str(input("\nEnter Morse to be translated\n\n"))
 
