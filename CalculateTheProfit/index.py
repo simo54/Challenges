@@ -1,4 +1,4 @@
-year = {
+quarters = {
     'q_one': {
         "cost_price": 32.67,
         "sell_price": 45.00,
@@ -18,6 +18,11 @@ year = {
     }
 }
 
-q_one_profit = ""
-q_two_profit = ""
-q_three_profit = ""
+annual_profit = {}
+
+for quarter, data in quarters.items():
+    total_quarter_sales = (data["sell_price"] -
+                           data["cost_price"]) * data["inventory"]
+    annual_profit[quarter] = total_quarter_sales.__round__()
+
+print("Year 2020 Profit: " + str(sum(annual_profit.values())))
