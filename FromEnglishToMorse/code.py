@@ -1,4 +1,3 @@
-
 # creating dictionary
 lettersToMorse = {
   "0": "-----",
@@ -60,13 +59,13 @@ if choice == 1:
         for match in lettersToMorse:
             if letter == match[0]:
                 output += lettersToMorse.get(match[0]) + " "
-                break
+                
     print("Output Morse: " + output)
 
 # From Morse to English
 else:
     text_morse = str(input("\nEnter Morse to be translated\n\n"))
-
+    
     output = ""
 
     for morse in text_morse.split():
@@ -75,6 +74,3 @@ else:
                     output += match
 
     print("Output: " + output)
-  
-
-
