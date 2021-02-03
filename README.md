@@ -1,4 +1,4 @@
-# algorithms
+# Challenges
 
 A repository containing my solved challenges.
 
